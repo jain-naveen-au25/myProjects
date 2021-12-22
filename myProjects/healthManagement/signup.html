@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         h1{
+            text-align: center;
+            background-color: blue;
+            height: 70px;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+            padding:30px;
+            margin:30px;
+        }
+        body{
+            background-color: aqua;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        form{
+            display: flex;
+            width:50%;
+            align-items: center;
+            align-self: center;
+            align-content: center;
+            background-color: yellow;
+            justify-content: center;
+            flex-direction: column;
+        }
+        h2{
+            align-content: center;
+            text-align: center;
+        }
+        input{
+            align-content: center;
+            padding: 5px;
+
+            
+        }
+        button{
+            width: 200px;
+            height: 25px;
+            background-color: blue;
+        }
+        div{
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>The World's Best Health Managemant website</h1>
+    <form method="POST" action="./signup.html">
+        <h2>Personal Information</h2>
+        <div>
+            <label>Name</label>
+            <input type="text" name="name" placeholder="Enter Name Here">
+            
+        </div>
+        <div>
+            <label>D.O.B.</label>
+            <input type="date" name="dob" placeholder="Enter D.O.B. Here">
+        </div>
+        <div>
+            <label>Gender :  </label>Male
+            <input type="radio" name="gender" value="Male">
+            Female
+            <input type="radio" name="gender" value="Female">
+            Other
+            <input type="radio" name="gender" value="Other">
+        </div>
+        <h2>Contact Details</h2>
+        <div><label>Mobile No.</label>
+        <input type="text" name="Mobile" placeholder="Enter Your Mobile No.">
+    </div>
+    <div>
+        <label>E-Mail Id</label>
+        <input type="email" name="Mail" placeholder="Enter Your Mail">
+    </div>
+    <div>
+        <label>Address</label>
+        <textarea name="address"></textarea></div><div>
+        pincode
+        <input type="text" name="pincode">
+    </div>
+    <div>
+        UserName <input type="text" name="username">
+    </div>
+    <div>
+        Password <input type="password" name="password">
+    </div>
+    <div>
+        Confirm Password <input type="password" name="password">
+    </div>
+    <div><input type="file" name="profile"></div>
+    I already have a Account <a href="login.html">Login</a>
+    <div><button type="submit">Submit</button></div>
+    </form>
+</body>
+</html>
