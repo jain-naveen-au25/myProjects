@@ -53,9 +53,9 @@ body{
   </style>
 </head>
 <body><div class="container">
-    <form id="login">
+    <form id="login" method="POST" action="/static/expenseTracker/index.html">
   <h1>Login Form</h1>
-  <div class="cont"><button><a href="login.html">Login</a></button><button><a href=".html">Sign Up</a></button></div>
+  <div class="cont"><button><a href="login.html">Login</a></button><button><a href="index.html">Sign Up</a></button></div>
   <div><input type="text" name="username" placeholder="E-Mail Address" id="username"></div>
   <div><input type="password" name="password" placeholder="Enter Password" id="password"></div>
   <div><a href="forgotPassword.html" class="fp">Forgot Password?</a></div>  
@@ -67,7 +67,7 @@ body{
 
 		<script>
 			const form = document.getElementById('login')
-			form.addEventListener('submit', login)
+			document.getElementById('btn2').addEventListener('click', login)
 
 			async function login(event) {
 				event.preventDefault()
@@ -83,20 +83,26 @@ body{
 						username,
 						password
 					})
-				}).then((res) => res.json()).catch ((err)=>{
+				}).then((req,res)=>{
+          res.redirect("/expenseTracker/index.html")
+        }
+        )
+      
+      .catch ((err)=>{
           console.log(err)
         })
-
-				if (result.status === 'ok') {
-					// everythign went fine
-					console.log('Got the token: ', result.data)
-					localStorage.setItem('token', result.data)
-					alert('Success')
-          header('Location: http://127.0.0.1:5500/static/expenseTracker/index.html')
-				} else {
-					alert(result.error)
-				}
-			}
+      }
+			// 	if (result.status === 'ok') {
+			// 		// everythign went fine
+			// 		console.log('Got the token: ', result.data)
+			// 		localStorage.setItem('token', result.data)
+			// 		alert('Success')
+      //     res.redirect("http://127.0.0.1:5500/static/expenseTracker/index.html")
+          
+			// 	} else {
+			// 		alert(result.error)
+			// 	}
+			// }
 		</script>
 	</body>
 </html>
