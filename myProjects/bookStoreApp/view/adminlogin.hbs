@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>sign in</title>
+    <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Verdana">
+</head>
+
+<body>
+    <div class="signin">
+       {{#if errormsg}}
+        <div class="alert alert-warning" role="alert">
+            {{errormsg}}
+        </div>
+        {{/if}}
+        <h2 style="color:white">Admin Login In</h2>
+        <form action="/adminauth" method="POST">
+            <div class="form-group">
+                <input type="username" name="username" class="form-control" placeholder="username" />
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" class="form-control" placeholder="password" /><br>
+                <nr></nr>
+            </div>
+            <input type="submit" value="login" class="btn btn-primary loginbutton" /><br><br>
+            
+    </div>
+
+</body>
+
+</html>

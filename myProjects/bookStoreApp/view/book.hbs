@@ -1,0 +1,23 @@
+<div class="book-content" style="padding: 105px 171px 21px 171px;">
+    <div class="row">
+        {{#each data}}
+        <div class="col-sm-3">
+            <div class="card" style="width:230px;height:345px">
+                <img src="{{tyhis.imagepath}}" style="width:227px;height:229px;" class="card-img-top" alt="">
+
+                <div class="card-body">
+                    <h5 class="book-name">{{this,name}}</h5>
+                    <span>
+
+                        <p class="para"><span style="color: gray;">price:</span>&#8377;{{this.price}}<br>
+                </div>
+                <div class="modal-footer">
+                    <button class="cartbtn btn store" value="{{this._id}}">Add to Cart</button><a
+                        href="/details/{{this._id}}" class="details">Details</a></p>
+                    </span>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

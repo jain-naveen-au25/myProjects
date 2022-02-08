@@ -1,0 +1,89 @@
+<div style="81px 11px 0px 11px">
+    <h4>Hello,{{adminname}}</h4>
+    <hr>
+      <button class="btn btn-primary"  data-toggle="modal" data-target="#addAmin">Add Admin</button>
+
+</div>
+<table class="table" style="width: 59%; margin:50px 0px 0px 59px;">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Role</th>
+      {{!-- <th scope="col"></th> --}}
+    </tr>
+  </thead>
+{{#each adminusers}}
+  <table class="table">
+  <tbody>
+
+      <td scope="col">{{this.name}}</td>
+      <td scope="col">{{this.email}}</td>
+      <td scope="col">{{this.role}}</td>
+      <td scope="col"><button class="btn edit" value="{{this._id}}" data-toggle="modal" data-target="#updateform" <i class="fa fa-pencil-square-o" aria-hidden="true" style="color:black;font-weight:bold;"></i></button>
+      &nbsp;<button  class="btn btn-danger deleteadmin" value="{{this._id}}"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+   
+  </tbody>
+  {{/each}}
+  </table>
+
+  <div class="modal fade" id="addAmin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title w-100 font-weight-bold" >Add <details></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+<p id="succesmessage"></p>
+<form id="updateinfo">
+  <div class="modal-body mx-3" style="background-color: #2bbbad! important; text-align:left">
+    <div class="md-form mb-5">
+      <label for="name">Enter name</label>
+      <input type="text" id="adminname"  name="name" value="{{userdetils.name}}" name="adminname"
+       class="form-control" required/>
+    </div>
+
+    <div class="md-form mb-5">
+      <label for="email">Enter email</label>
+      <input type="text" id="adminemail"  name="email" value="{{userdetils.emailid}}" 
+       class="form-control validte" required />
+    </div>
+      <div class="md-form mb-4">
+      <label for="password">Enter password</label>
+      <input type="text" id="adminpassword"  name="password" value="{{userdetils.password}}" 
+       class="form-control validte" required />
+    </div>
+
+    <div class="md-form mb-4">
+      <label for="phonenumber">Enter phone</label>
+      <input type="number" id="adminnumber"  name="number" value="{{userdetils.phonenumber}}" 
+       class="form-control validte" required />
+    </div>
+
+      <div class="md-form mb-4">
+      <label for="age">Enter age</label>
+      <input type="text" id="adminage"  name="age" value="{{userdetils.age}}" 
+       class="form-control validte" required />
+    </div>
+
+      <div class="md-form mb-4">
+      <label for="role">Role</label>
+      <input type="text" id="adminrole"  name="role" value="{{userdetils.role}}" 
+       class="form-control validte" required />
+    </div>
+
+    <div class="modal-footer d-flex">
+    <button class="btn btn-primary" type="button" data-dismiss="modal">Close</button>
+    <button class="btn btn-primary" id="addadmin">Admin</button>
+
+
+  </div>
+  </form>
+  </div>
+  </div>
+  
+
+</div>
