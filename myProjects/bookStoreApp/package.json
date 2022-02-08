@@ -1,0 +1,24 @@
+{
+  "name": "bookstoreapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cloudinary": "^1.28.1",
+    "dotenv": "^14.3.2",
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "express-session": "^1.17.2",
+    "mongodb": "^4.3.1",
+    "multer": "^1.4.4",
+    "multer-storage-cloudinary": "^4.0.0",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {},
+  "description": ""
+}
