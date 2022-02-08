@@ -1,0 +1,42 @@
+<div class="container" style="margin-bottom:21px;margin-top:79px;">
+    <form id="buyproduct">
+        <div class="form-data col-sm-6">
+            <h3 style="font-weight: bold; color:black">Please update the details</details>
+            </h3>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" value="{{userdetails.name}}" name="name" id="name"
+                    placeholder="Full name">
+            </div>
+            <div class="from-group">
+                <label for="mobile">Enter mobile Number</label>
+
+                <input type="number" class="form-control" value="{{userdetails.phonenumber}}" name="mobilenumber"
+                    id="number" placeholder="Mobile Number" required>
+
+            </div>
+            <div class="from-group">
+                <label for="landmark">Enter Landmark</label>
+
+                <input type="text" class="form-control" value="{{address.[1].landmarke}}" name="area" id="landmark"
+                    placeholder="landmark" required>
+
+            </div>
+            <div class="from-group">
+                <label for="town">Enter Town/city</label>
+
+                <input type="text" class="form-control" value="{{address.[1].town}}" name="ISBN" id="town"
+                    placeholder="town" required>
+
+            </div>
+            <div class="from-group">
+                <label for="state">Enter State</label>
+
+                <input type="text" class="form-control" value="{{address.[1].state}}" name="state" id="state"
+                    placeholder="state" required>
+
+            </div>
+            <button class="btn btn-primary">Deliver to this Address</button>
+        </div>
+    </form>
+</div>
